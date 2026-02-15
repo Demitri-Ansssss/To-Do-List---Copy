@@ -1,1 +1,11 @@
-node_modules
+/vendor
+/node_modules
+/.git
+/.github
+/tests
+/storage
+/.env
+/.env.example
+/artisan
+/phpunit.xml
+/README.md

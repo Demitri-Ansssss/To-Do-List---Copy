@@ -20,6 +20,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (isset($_ENV['VERCEL'])) {
+            $path = '/tmp/storage/framework/views';
+            if (!is_dir($path)) {
+                mkdir($path, 0777, true);
+            }
+            $this->app->useStoragePath('/tmp/storage');
+        }
         // Only force HTTPS when actually deployed on Vercel, not on local development
         if (env('VERCEL', false)) {
             URL::forceScheme('https');
