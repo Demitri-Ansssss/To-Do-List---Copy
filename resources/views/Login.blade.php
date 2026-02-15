@@ -51,7 +51,7 @@
             async submitLogin() {
                 this.errorMessage = '';
                 try {
-                    const response = await fetch('/api/auth/login', {
+                    const response = await fetch('https://to-do-list-project-apss.vercel.app/api/auth/login', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
