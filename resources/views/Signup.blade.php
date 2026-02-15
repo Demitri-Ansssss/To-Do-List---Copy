@@ -43,7 +43,7 @@
             errorMessage: '',
             async submitSignup(){
                 try {
-                    const response = await fetch('/auth/register', {
+                    const response = await fetch('/api/auth/register', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
